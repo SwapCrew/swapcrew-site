@@ -47,7 +47,7 @@ const TradeBoard = () => {
           title: "Create logo variations",
           priority: "high",
           type: "design",
-          trader: "Mike B.",
+          trader: "Alex C.",
           avatar: "/api/placeholder/24/24",
           isLocked: false,
         },
@@ -62,7 +62,7 @@ const TradeBoard = () => {
           title: "Homepage wireframe",
           priority: "high",
           type: "design",
-          trader: "Emma W.",
+          trader: "Sarah M.",
           avatar: "/api/placeholder/24/24",
           isLocked: true,
           milestone: "1 of 3",
@@ -73,7 +73,7 @@ const TradeBoard = () => {
           title: "About page design",
           priority: "medium",
           type: "design",
-          trader: "Emma W.",
+          trader: "Alex C.",
           avatar: "/api/placeholder/24/24",
           isLocked: true,
           milestone: "2 of 3",
@@ -90,7 +90,7 @@ const TradeBoard = () => {
           title: "Brand identity guidelines",
           priority: "medium",
           type: "design",
-          trader: "Ava P.",
+          trader: "Alex C.",
           avatar: "/api/placeholder/24/24",
           rating: 5,
         },
@@ -308,11 +308,11 @@ const TradeBoard = () => {
                   {/* Trader info */}
                   <div className="flex items-center mt-2">
                     <div className="w-5 h-5 rounded-full overflow-hidden">
-                      <img
+                      {/* <img
                         src={trade.avatar}
                         alt={trade.trader}
                         className="w-full h-full object-cover"
-                      />
+                      /> */}
                     </div>
                     <span className="ml-1 text-xs text-gray-500 dark:text-gray-400">
                       {trade.trader}
