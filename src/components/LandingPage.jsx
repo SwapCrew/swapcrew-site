@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Footer from "./Footer";
 import SubscriptionForm from "./SubscriptionForm";
+import TaskBoardShowcase from "./TradeBoard";
 
 const LandingPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -138,24 +139,7 @@ const LandingPage = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      quote:
-        "SwapCrew helped me trade web development for SEO services, doubling my visibility!",
-      author: "Alex Chen",
-      role: "Freelance Developer",
-      avatar: "/api/placeholder/150/150",
-      rating: 5,
-    },
-    {
-      quote:
-        "As a student designer, I got real-world experience creating a startup's brand identity.",
-      author: "Sarah Miller",
-      role: "Design Student",
-      avatar: "/api/placeholder/150/150",
-      rating: 5,
-    },
-  ];
+  
 
   return (
     <div
@@ -454,6 +438,24 @@ const LandingPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Manage Your Trades With Ease
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Track progress, set milestones, and collaborate effectively with
+              our intuitive task management system
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <TaskBoardShowcase />
           </div>
         </div>
       </section>
