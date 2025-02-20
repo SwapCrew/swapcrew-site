@@ -17,6 +17,7 @@ import {
 import Footer from "./Footer";
 import SubscriptionForm from "./SubscriptionForm";
 import TaskBoardShowcase from "./TradeBoard";
+import CreditsSection from "./CreditSection";
 
 const LandingPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -173,6 +174,12 @@ const LandingPage = () => {
               className="font-medium hover:text-blue-600 transition-colors"
             >
               Features
+            </a>
+            <a
+              href="#credit"
+              className="font-medium hover:text-blue-600 transition-colors"
+            >
+             Credits
             </a>
             <a
               href="#use-cases"
@@ -456,6 +463,16 @@ const LandingPage = () => {
 
           <div className="max-w-5xl mx-auto">
             <TaskBoardShowcase />
+          
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6" id="credit">
+        <div className="container mx-auto">
+          <div className="max-w-5xl mx-auto">
+      
+            <CreditsSection/>
           </div>
         </div>
       </section>
