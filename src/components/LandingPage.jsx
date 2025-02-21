@@ -18,12 +18,13 @@ import Footer from "./Footer";
 import SubscriptionForm from "./SubscriptionForm";
 import TaskBoardShowcase from "./TradeBoard";
 import CreditsSection from "./CreditSection";
+import HeroSection from "./Hero";
 
 const LandingPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isVisible, setIsVisible] = useState({});
 
-  // Animation on scroll functionality
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -150,7 +151,7 @@ const LandingPage = () => {
           : "bg-gradient-to-b from-gray-50 to-white text-gray-900"
       } transition-colors duration-300`}
     >
-      {/* Navbar with glass effect */}
+     
       <nav className="fixed w-full top-0 z-50 bg-opacity-80 backdrop-blur-lg shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
@@ -208,76 +209,9 @@ const LandingPage = () => {
         </div>
       </nav>
 
-      {/* Hero Section with animated elements */}
-      <section className="pt-32 pb-24 px-6 relative overflow-hidden">
-        {/* Decorative circles */}
-        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-blue-500 opacity-10 filter blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-purple-500 opacity-10 filter blur-3xl"></div>
+     
+      <HeroSection isDarkMode={isDarkMode} />
 
-        <div className="container mx-auto text-center relative z-10">
-          <div className="animate-on-scroll" id="hero">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-green-500 bg-clip-text text-transparent leading-tight">
-              Trade Skills, Build Together
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed">
-              SwapCrew is a skill-based service exchange platform where
-              freelancers, students, and professionals collaborate
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold px-1">
-                without financial barriers
-              </span>
-              .
-            </p>
-            <div className="flex flex-col md:flex-row gap-6 justify-center mt-12">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1">
-                Get Started
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 transition-all transform hover:-translate-y-1">
-                Learn More
-              </button>
-            </div>
-          </div>
-
-          {/* Stats banner */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div
-              className={`p-6 rounded-xl ${
-                isDarkMode ? "bg-gray-800" : "bg-white"
-              } shadow-lg transform transition-all duration-300 hover:scale-105`}
-            >
-              <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                10,000+
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
-                Target Community Size
-              </p>
-            </div>
-            <div
-              className={`p-6 rounded-xl ${
-                isDarkMode ? "bg-gray-800" : "bg-white"
-              } shadow-lg transform transition-all duration-300 hover:scale-105`}
-            >
-              <p className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                100%
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
-                Skills-Based Exchange
-              </p>
-            </div>
-            <div
-              className={`p-6 rounded-xl ${
-                isDarkMode ? "bg-gray-800" : "bg-white"
-              } shadow-lg transform transition-all duration-300 hover:scale-105`}
-            >
-              <p className="text-4xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
-                30+
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
-                Planned Skill Categories
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* How It Works */}
       <section id="how-it-works" className="py-24 px-6 relative">
